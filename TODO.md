@@ -114,9 +114,9 @@ These features define the first complete release.
 
 # About Page
 
-- [ ] Create About page
-- [ ] Write author introduction
-- [ ] Explain purpose of website
+- [x] Create About page
+- [x] Write author introduction
+- [x] Explain purpose of website
 
 ---
 
