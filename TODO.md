@@ -105,10 +105,10 @@ These features define the first complete release.
 
 # Homepage
 
-- [ ] Add website title
-- [ ] Add introduction
-- [ ] Add browse button
-- [ ] Display recent poems
+- [x] Add website title
+- [x] Add introduction
+- [x] Add browse button
+- [x] Display recent poems
 
 ---
 

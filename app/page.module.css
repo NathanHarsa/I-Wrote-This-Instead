@@ -5,26 +5,117 @@
 
 .header {
   text-align: center;
-  margin-bottom: var(--space-16);
-}
-
-.header h1 {
-  margin: 0 0 var(--space-4) 0;
-  font-size: clamp(
-    var(--text-3xl),
-    10vw,
-    var(--text-4xl)
-  );
-}
-
-.subtitle {
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: var(--text-lg);
-}
-
-.contentSection {
   margin-bottom: var(--space-12);
+}
+
+.title {
+  margin: 0 0 var(--space-3) 0;
+  font-size: clamp(var(--text-3xl), 10vw, var(--text-4xl));
+  font-weight: 600;
+  color: var(--text);
+}
+
+.byline {
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--text-lg);
+  color: var(--text);
+}
+
+.tagline {
+  margin: 0;
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: var(--space-16);
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.browseButton {
+  display: inline-block;
+  padding: var(--space-3) var(--space-8);
+  background-color: var(--text);
+  color: var(--background);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  cursor: pointer;
+}
+
+.browseButton:hover {
+  background-color: var(--link);
+  color: var(--background);
+}
+
+.browseButton:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 4px;
+}
+
+.recentSection {
+  margin-bottom: var(--space-12);
+}
+
+.recentTitle {
+  margin: 0 0 var(--space-6) 0;
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.recentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.recentPoem {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--border);
+  transition: background-color var(--transition-fast);
+}
+
+.recentPoem:last-child {
+  border-bottom: none;
+}
+
+.recentPoem:hover {
+  background-color: var(--background-hover);
+}
+
+.recentPoemLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.recentPoemTitle {
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--link);
+  transition: color var(--transition-fast);
+}
+
+.recentPoemLink:hover .recentPoemTitle {
+  color: var(--link-hover);
+}
+
+.recentPoemLink:focus-visible .recentPoemTitle {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.recentPoemDate {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
 }
 
 @media (max-width: 640px) {
@@ -33,6 +124,36 @@
   }
 
   .header {
+    margin-bottom: var(--space-8);
+  }
+
+  .title {
+    font-size: var(--text-3xl);
+  }
+
+  .intro {
     margin-bottom: var(--space-12);
+    padding: var(--space-6) 0;
+  }
+
+  .browseButton {
+    padding: var(--space-2) var(--space-6);
+    font-size: var(--text-base);
+  }
+
+  .recentSection {
+    margin-bottom: var(--space-8);
+  }
+
+  .recentTitle {
+    font-size: var(--text-xl);
+  }
+
+  .recentPoem {
+    padding: var(--space-4) 0;
+  }
+
+  .recentPoemTitle {
+    font-size: var(--text-base);
   }
 }
