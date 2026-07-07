@@ -84,11 +84,11 @@ These features define the first complete release.
 
 # Poem Archive
 
-- [ ] Create poems page
-- [ ] Create poem cards
-- [ ] Add poem links
-- [ ] Add date display
-- [ ] Test sorting
+- [x] Create poems page
+- [x] Create poem cards
+- [x] Add poem links
+- [x] Add date display
+- [x] Test sorting
 
 ---
 
