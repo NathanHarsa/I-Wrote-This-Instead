@@ -73,12 +73,12 @@ These features define the first complete release.
 # Markdown System
 
 - [x] Install markdown dependencies
-- [ ] Create markdown parser
-- [ ] Read poem files
-- [ ] Parse frontmatter
-- [ ] Generate slugs
-- [ ] Sort poems by date
-- [ ] Filter unpublished poems
+- [x] Create markdown parser
+- [x] Read poem files
+- [x] Parse frontmatter
+- [x] Generate slugs
+- [x] Sort poems by date
+- [x] Filter unpublished poems
 
 ---
 
