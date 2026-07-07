@@ -1,0 +1,19 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--background);
+  margin-top: var(--space-24);
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+}
+
+.copyright {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}

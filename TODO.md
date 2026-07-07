@@ -63,10 +63,10 @@ These features define the first complete release.
 
 # Navigation
 
-- [ ] Create Navbar component
-- [ ] Create Footer component
-- [ ] Add navigation links
-- [ ] Test mobile navigation
+- [x] Create Navbar component
+- [x] Create Footer component
+- [x] Add navigation links
+- [x] Test mobile navigation
 
 ---
 
