@@ -43,11 +43,11 @@ These features define the first complete release.
 
 # Application Foundation
 
-- [ ] Create application folder structure
-- [ ] Create root layout
-- [ ] Configure metadata
-- [ ] Configure global styles
-- [ ] Add fonts
+- [x] Create application folder structure
+- [x] Create root layout
+- [x] Configure metadata
+- [x] Configure global styles
+- [x] Add fonts
 
 ---
 

@@ -1,0 +1,39 @@
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-4);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.header h1 {
+  margin: 0 0 var(--space-4) 0;
+  font-size: clamp(
+    var(--text-3xl),
+    10vw,
+    var(--text-4xl)
+  );
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--text-lg);
+}
+
+.contentSection {
+  margin-bottom: var(--space-12);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .header {
+    margin-bottom: var(--space-12);
+  }
+}
