@@ -1,0 +1,36 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border);
+}
+
+.prevLink,
+.nextLink {
+  color: var(--link);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  font-size: var(--text-base);
+}
+
+.prevLink:hover,
+.nextLink:hover {
+  color: var(--link-hover);
+}
+
+.prevLink:focus-visible,
+.nextLink:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.prevLink {
+  text-align: left;
+}
+
+.nextLink {
+  text-align: right;
+  margin-left: auto;
+}

@@ -94,12 +94,12 @@ These features define the first complete release.
 
 # Individual Poems
 
-- [ ] Create dynamic poem routes
-- [ ] Render markdown content
-- [ ] Add metadata generation
-- [ ] Add back button
-- [ ] Add previous/next navigation
-- [ ] Handle missing poems
+- [x] Create dynamic poem routes
+- [x] Render markdown content
+- [x] Add metadata generation
+- [x] Add back button
+- [x] Add previous/next navigation
+- [x] Handle missing poems
 
 ---
 

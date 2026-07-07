@@ -1,0 +1,25 @@
+.backButton {
+  appearance: none;
+  background: none;
+  border: none;
+  color: var(--link);
+  font-size: var(--text-base);
+  font-family: var(--font-body);
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--transition-fast);
+  margin-bottom: var(--space-8);
+}
+
+.backButton:hover {
+  color: var(--link-hover);
+}
+
+.backButton:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.backButton:active {
+  opacity: 0.8;
+}
