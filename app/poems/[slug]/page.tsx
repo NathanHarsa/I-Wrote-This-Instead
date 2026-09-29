@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
+
 import { Container } from "@/components/Container";
 import { BackButton } from "@/components/BackButton";
 import { PreviousNext } from "@/components/PreviousNext";
 import { getPublishedPoems, getPoemBySlug, getAdjacentPoems } from "@/lib/poems";
+import { baseOpenGraph, siteConfig } from "@/lib/site";
 
 import styles from "./page.module.css";
 
@@ -16,19 +19,42 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PoemPageProps) {
+export async function generateMetadata({
+  params,
+}: PoemPageProps): Promise<Metadata> {
   const { slug } = await params;
   const poem = await getPoemBySlug(slug);
 
-  if (!poem) {
+  if (!poem || !poem.published) {
     return {
       title: "Poem Not Found",
+      robots: { index: false },
     };
   }
 
+  const description =
+    poem.description || poem.excerpt || "A poem from I Wrote This Instead.";
+  const url = `/poems/${poem.slug}`;
+
   return {
-    title: `${poem.title} | I Wrote This Instead`,
-    description: poem.description || "A poem from I Wrote This Instead.",
+    title: poem.title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      ...baseOpenGraph,
+      type: "article",
+      title: poem.title,
+      description,
+      url,
+      publishedTime: new Date(poem.date).toISOString(),
+      authors: [siteConfig.author],
+      tags: poem.tags ? [...poem.tags] : undefined,
+    },
+    twitter: {
+      card: "summary",
+      title: poem.title,
+      description,
+    },
   };
 }
 

@@ -142,11 +142,11 @@ These features define the first complete release.
 
 # SEO
 
-- [ ] Add page metadata
-- [ ] Add poem metadata
-- [ ] Add Open Graph data
-- [ ] Add sitemap
-- [ ] Add robots.txt
+- [x] Add page metadata
+- [x] Add poem metadata
+- [x] Add Open Graph data
+- [x] Add sitemap
+- [x] Add robots.txt
 
 ---
 

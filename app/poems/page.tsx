@@ -1,12 +1,22 @@
+import type { Metadata } from "next";
+
 import { Container } from "@/components/Container";
 import { PoemCard } from "@/components/PoemCard";
 import { getPublishedPoems } from "@/lib/poems";
+import { baseOpenGraph } from "@/lib/site";
 
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Poems | I Wrote This Instead",
+export const metadata: Metadata = {
+  title: "Poems",
   description: "A collection of published poems.",
+  alternates: { canonical: "/poems" },
+  openGraph: {
+    ...baseOpenGraph,
+    title: "Poems",
+    description: "A collection of published poems.",
+    url: "/poems",
+  },
 };
 
 export default async function PoemsPage() {
