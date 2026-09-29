@@ -1,10 +1,20 @@
+import type { Metadata } from "next";
+
 import { Container } from "@/components/Container";
+import { baseOpenGraph } from "@/lib/site";
 
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "About | I Wrote This Instead",
+export const metadata: Metadata = {
+  title: "About",
   description: "Learn about the author and the purpose of this poetry collection.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    ...baseOpenGraph,
+    title: "About",
+    description: "Learn about the author and the purpose of this poetry collection.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {
