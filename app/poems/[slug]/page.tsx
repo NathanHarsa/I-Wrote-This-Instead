@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 import { Container } from "@/components/Container";
 import { BackButton } from "@/components/BackButton";
 import { PreviousNext } from "@/components/PreviousNext";
@@ -20,7 +22,7 @@ export async function generateMetadata({ params }: PoemPageProps) {
   const { slug } = await params;
   const poem = await getPoemBySlug(slug);
 
-  if (!poem) {
+  if (!poem || !poem.published) {
     return {
       title: "Poem Not Found",
     };
@@ -37,13 +39,7 @@ export default async function PoemPage({ params }: PoemPageProps) {
   const poem = await getPoemBySlug(slug);
 
   if (!poem || !poem.published) {
-    return (
-      <Container>
-        <main className={styles.main}>
-          <p>Poem not found.</p>
-        </main>
-      </Container>
-    );
+    notFound();
   }
 
   const { prev, next } = await getAdjacentPoems(slug);
